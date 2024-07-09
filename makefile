@@ -7,7 +7,7 @@ LDFLAGS = -lsfml-graphics -lsfml-window -lsfml-system
 
 TARGET = demo
 
-TARGETVISUAL = demoVis
+TARGETVISUAL = tree
 
 SOURCES = demo.cpp Complex.cpp
 
