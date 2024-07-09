@@ -68,4 +68,9 @@ public:
         return os;
     }
 
+    // function to_string to convert the data to a string
+    std::string to_string() const {
+        return std::to_string(data);
+    }
+
 };

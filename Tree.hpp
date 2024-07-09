@@ -46,6 +46,11 @@ public:
         root = new Node<T>(val);
     }
 
+    // get the root node
+    Node<T>* get_root() const {
+        return root;
+    }
+
     // add a child to specific parent if index is not mentioned, add to the free space in order in the children vector default
     void add_sub_node(const T& parentVal, const T& childVal) {
         Node<T>* parent = find_node(root, parentVal);
@@ -73,6 +78,11 @@ public:
         } else {
             throw std::runtime_error("Parent not found");
         }
+    }
+
+    // Function to get the node by value
+    Node<T>* find_node(const T& val) const {
+        return find_node(root, val);
     }
 
 
@@ -191,4 +201,5 @@ public:
         return HeapIter(nullptr);
     }
 };
+
 

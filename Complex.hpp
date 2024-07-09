@@ -47,7 +47,7 @@ public:
     void setImag(double imag);
 
     // Function to convert the complex number to a string
-    std::string toString() const;
+    std::string to_string() const;
 
     // Operator overloading for the << operator
     friend std::ostream& operator <<(std::ostream& os, const Complex& complex);

@@ -101,14 +101,12 @@ void Complex::setImag(double imag) {
     this->imag = imag;
 }
 
-std::string Complex::toString() const {
-     std::ostringstream oss;
-        oss << real<< (imag >= 0 ? "+" : "") << imag << "i";
-        return oss.str();
+std::string Complex::to_string() const {
+      return std::to_string(real) + "+" + std::to_string(imag) + "i";
 }
 
 std::ostream& operator<<(std::ostream& os, const Complex& complex) {
-    os << complex.toString();
+    os << complex.real << "+" << complex.imag << "i";
     return os;
 }
 
